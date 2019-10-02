@@ -1,0 +1,47 @@
+<%= form_for(@ticket) do |f| %>
+  <% if @ticket.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@ticket.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @ticket.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group field">
+    <%= f.label :title %><br>
+    <%= f.text_field :title, class: "form-control" %>
+  </div>
+  
+  <div class="form-group field">
+    <%= f.label :status %><br>
+    <%= f.text_field :status, class: "form-control"  %>
+  </div>
+  
+  <div class="form-group field">
+    <%= f.label :description %><br>
+    <%= f.text_area :description, class: "form-control"  %>
+  </div>
+  
+  <div class="form-group field">
+    <%= f.label :user_id %><br>
+    <%= f.text_field :user_id, class: "form-control"  %>
+  </div>
+  
+  <div class="form-group field">
+    <%= f.label :device_id %><br>
+    <%= f.text_field :device_id, class: "form-control"  %>
+  </div>
+  
+  <div class="form-group">
+    <label for="exampleFormControlFile1">Insert a Photo</label>
+    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+<%end%>
+

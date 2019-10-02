@@ -1,0 +1,21 @@
+<%= form_for(@device_category) do |f| %>
+  <% if @device_category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@device_category.errors.count, "error") %> prohibited this ticket from being saved:</h2>
+
+      <ul>
+      <% @device_category.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  
+  <div class="form-group field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, class: "form-control"%>
+  </div>
+   
+  <button type="submit" class="btn btn-primary">Submit</button>
+
+<%end%>

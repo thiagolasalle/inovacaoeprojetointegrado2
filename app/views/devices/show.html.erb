@@ -1,0 +1,15 @@
+<section class="jumbotron">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <h1 class="display-4"><%= @device.code %></h1>
+      </div>
+    </div>
+    <p><strong>Device Category:</strong> <%= @device.device_category.name %></p>
+    <p><strong>Local:</strong> <%= @device.local.room %> - <%= @device.local.floor %></p>
+    <div class="float-right">
+      <%= link_to 'Edit', edit_device_path, class:"btn btn-info btn" %>
+      <%= link_to 'Back', devices_path, class:"btn btn-secondary btn" %>
+    </div>
+  </div>
+</section>

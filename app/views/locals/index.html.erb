@@ -1,0 +1,38 @@
+<section class="jumbotron">
+  <div class="container">
+    <h1 class="display-3">Local</h1>
+    <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+    <div class="float-right">
+      <%= link_to 'New Local', new_local_path, class:"btn btn-success btn-lg" %>
+    </div>
+  </div>
+</section>
+
+<section class="container">
+  <p id="notice"><%= notice %></p>
+  <div class="container">
+    <table class="table table-hover table-dark">
+      <thead>
+        <tr class="d-flex">
+          <th scope="col" class="col-5">Room</th>
+          <th scope="col" class="col-5">Floor</th>
+          <th scope="col" class="col-2"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @locals.each do |local| %>
+        <tr class="d-flex">
+          <td class="col-5"><%= local.room %></td>
+          <td class="col-5"><%= local.floor %></td>
+          <td class="col-2">
+            <div class="row">
+              <%= link_to 'Show', local, :class => "btn btn-info btn-sm mx-2" %>
+              <%= link_to 'Destroy', local, method: :delete, data: { confirm: 'Are you sure?' }, :class => "btn btn-danger btn-sm mx-2"  %>
+            </div>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  code: MyString
+  local_id: 
+  device_category_id: 
+
+two:
+  code: MyString
+  local_id: 
+  device_category_id: 
